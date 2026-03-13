@@ -1,0 +1,21 @@
+
+<h2>Trend Map</h2>
+<div id="map"></div>
+
+<script>
+
+fetch("../data/trend_map.json")
+.then(r=>r.json())
+.then(d=>{
+
+let html=""
+
+for(let k in d){
+ html+=k+" : "+d[k]+"<br>"
+}
+
+document.getElementById("map").innerHTML=html
+
+})
+
+</script>

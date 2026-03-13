@@ -1,0 +1,7 @@
+snscrape
+pandas
+numpy
+scikit-learn
+sentence-transformers
+langdetect
+matplotlib
