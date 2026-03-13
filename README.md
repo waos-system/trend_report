@@ -1,3 +1,7 @@
+# TODO
+snscrapeが使用できない、X APIは有料のため開発を中断
+Github Actionも停止中
+
 
 AI Trend Monitor Ultra
 
