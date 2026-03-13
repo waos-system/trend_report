@@ -28,6 +28,7 @@ jobs:
         mkdir -p data
 
     - run: |
+        export PYTHONPATH="$GITHUB_WORKSPACE"
         python scripts/collect_x.py
         python scripts/region_filter.py
         python scripts/bot_filter.py
