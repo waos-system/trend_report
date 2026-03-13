@@ -18,6 +18,9 @@ jobs:
         python-version: '3.10'
 
     - run: pip install -r requirements.txt
+    - run: |
+        mkdir -p docs
+        cp -r web/* docs/
 
     - run: |
         python scripts/collect_x.py

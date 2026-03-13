@@ -1,5 +1,7 @@
 
-import json,pandas as pd
+import json
+import os
+import pandas as pd
 
 df=pd.read_json("data/clean.json")
 
@@ -16,4 +18,6 @@ for r,keys in regions.items():
     for k in keys:
         result[r]+=df.location.str.lower().str.contains(k).sum()
 
-json.dump(result,open("data/trend_map.json","w"))
+out_dir=os.path.join("docs","data")
+os.makedirs(out_dir, exist_ok=True)
+json.dump(result,open(os.path.join(out_dir,"trend_map.json"),"w"))
